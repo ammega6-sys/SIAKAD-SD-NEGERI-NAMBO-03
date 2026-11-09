@@ -36,8 +36,8 @@ export const INITIAL_SCHOOL_PROFILE: SchoolProfile = {
     "Mewujudkan budaya sekolah yang ramah anak, bersih, hijau, tertib, dan berwawasan lingkungan."
   ],
   principalSpeech: "Assalamu'alaikum Warahmatullahi Wabarakatuh, Salam Sejahtera untuk kita semua. Selamat datang di portal SIAKAD (Sistem Administrasi Sekolah Terpadu). Melalui digitalisasi administrasi terpadu berbasis Google Workspace & Spreadsheet, kami berkomitmen mewujudkan transparansi, efisiensi kerja guru, penguatan evaluasi pembelajaran, serta monitoring komprehensif bagi seluruh civitas akademika menuju sekolah berprestasi dan berkarakter unggul.",
-  bannerImage: "/src/assets/images/school_building_indonesia_1794193480979.jpg",
-  principalImage: "/src/assets/images/principal_headshot_1794193495933.jpg",
+  bannerImage: "/images/school_building.jpg",
+  principalImage: "/images/principal_headshot.jpg",
   headOfAdministration: "Hj. Ratna Sari, S.E."
 };
 
@@ -53,7 +53,7 @@ export const INITIAL_USERS: User[] = [
     phone: "081298765432",
     gender: "L",
     status: "Aktif",
-    avatar: "/src/assets/images/principal_headshot_1794193495933.jpg",
+    avatar: "/images/principal_headshot.jpg",
     password: "admin"
   },
   {

@@ -75,9 +75,12 @@ export const PrincipalProfileView: React.FC = () => {
         <div className="p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
           <div className="w-36 h-36 md:w-48 md:h-48 rounded-2xl overflow-hidden shrink-0 border-4 border-red-100 shadow-sm mx-auto md:mx-0">
             <img
-              src={profile.principalImage || "/src/assets/images/principal_headshot_1794193495933.jpg"}
+              src={profile.principalImage || "/images/principal_headshot.jpg"}
               alt={profile.principalName}
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="%23dc2626" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg>';
+              }}
               className="w-full h-full object-cover"
             />
           </div>

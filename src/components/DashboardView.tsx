@@ -57,9 +57,13 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
       <div className="relative rounded-2xl overflow-hidden shadow-sm border border-slate-200">
         <div className="h-64 sm:h-72 w-full relative">
           <img
-            src={profile.bannerImage || "/src/assets/images/school_building_indonesia_1794193480979.jpg"}
+            src={profile.bannerImage || "/images/school_building.jpg"}
             alt={profile.schoolName}
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              // Graceful fallback to styled gradient if image fails
+              (e.target as HTMLElement).style.display = 'none';
+            }}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-black/30" />
@@ -240,9 +244,12 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
           <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs">
             <div className="flex items-center gap-4 mb-4">
               <img
-                src={profile.principalImage || "/src/assets/images/principal_headshot_1794193495933.jpg"}
+                src={profile.principalImage || "/images/principal_headshot.jpg"}
                 alt={profile.principalName}
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="%23dc2626" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/></svg>';
+                }}
                 className="w-16 h-16 rounded-xl object-cover border-2 border-red-200 shadow-xs"
               />
               <div>
