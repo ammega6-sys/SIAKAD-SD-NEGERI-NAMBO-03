@@ -1,0 +1,6 @@
+{
+  "name": "SIAKAD - Sistem Administrasi Sekolah Terpadu",
+  "description": "Sistem Informasi dan Administrasi Akademik Sekolah Terpadu berbasis Google Sheets, mendukung role Kepala Sekolah dan Guru dengan isolasi kelas, absensi, ledger nilai, materi, dan game edukasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
